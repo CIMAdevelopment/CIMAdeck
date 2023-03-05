@@ -1,0 +1,80 @@
+calculate the locations of the the buttons
+
+SCREEN_WIDTH = 480
+SCREEN_HEIGHT = 320
+
+
+
+int COLUMNS=5;
+int ROWS=3;
+int thickness_spaces=10;
+int border_text=3;
+int font_width=18;
+int font_height=24;
+int FONT_SIZE=3;
+
+
+thickness_spaces = 10
+UPPER_BORDER_SIZE = 24 // Bluetooth icon will be placed here
+thickness_spaces_h =
+
+TOTAL_BUTTONS = ROWS * COLUMNS
+max_pixel_per_row = SCREEN_HEIGHT / ROWS
+max_pixel_per_row_bt_icon = SCREEN_HEIGHT - UPPER_BORDER_SIZE / ROWS 
+max_pixel_per_col = SCREEN_WIDTH / COLUMNS
+b_width = max_pixel_per_col - thickness_spaces - thickness_spaces
+b_height = max_pixel_per_row - thickness_spaces - thickness_spaces
+
+
+//text
+max_font_space_w = b_width - border_text
+max_font_space_h = b_height - border_text
+max_letters_per_row = max_font_space_w / font_width
+max_rows_per_button = max_font_space_h / font_height
+max_letters = max_letters_per_row * max_rows_per_button
+
+
+
+int TOTAL_BUTTONS = ROWS*COLUMNS;
+int max_pixel_per_row = SCREEN_HEIGHT / ROWS;
+int max_pixel_per_col = SCREEN_WIDTH / COLUMNS;
+int b_width = max_pixel_per_col - thickness_spaces - thickness_spaces;
+int b_height = max_pixel_per_row - thickness_spaces - thickness_spaces;
+int max_font_space_w = b_width - border_text;
+int max_font_space_h = b_height - border_text;
+int max_letters_per_row = max_font_space_w / font_width;
+int max_rows_per_button = max_font_space_h / font_height;
+int max_letters = max_letters_per_row * max_rows_per_button;
+
+int buttons_positions[TOTAL_BUTTONS][2] = {};
+uint32_t buttons_colors[TOTAL_BUTTONS];
+String buttons_names[TOTAL_BUTTONS];
+bool button_state[TOTAL_BUTTONS];
+
+
+int t_x = 0;
+int t_y = 0;
+int last_i = 0;
+
+aspect ratio for the buttons must be 1:1 (i want nice squares)
+there also must be left some space above the buttons for icons (for a bluetooth icon as example, must be around 24 pixels i guess)
+there also must be left some space inbetween the buttons
+
+
+total_buttons = AMOUNT_BUTTONS_WIDTH * AMOUNT_BUTTONS_HEIGHT
+
+//run as long as the needed amount of buttons isnt reached
+for(int a=0; a < total_buttons; a++){
+	//code
+}
+
+28
+
+
+480 / 5 = 96
+320 / 4 = 80
+
+320 / 3 = 106,6666666666667
+480 / 5 = 96
+
+
